@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Wilson Installing Proxmox Virtual Environment (PVE)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: -2;
+            line-height: 1.6;
+            color: #000000;
+        }
+        header {
+            background: #007acc;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #005f99;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #003f66;
+        }
+        section {
+            padding: -2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px; /* Adds space above the footer */
+            width: 100%; /* Makes the footer take full width */
+        }
+        footer img {
+            width: 150px; /* Adjust size as needed */
+            margin-bottom: 0px; /* Adds space between the logo and text */
+            display: block; /* Ensures the image is displayed as a block element */
+            margin-left: auto; /* Centers the image horizontally */
+            margin-right: auto; /* Centers the image horizontally */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Brian Wilson: Installing Proxmox Virtual Environment (PVE)</h1>
+    <img src="proxmox.jpg" alt="Proxmox Logo" style="width:100%; max-width: 600px; display:block; margin: 0 auto;">
+    <p>This installation can be done on any computer, both PC and Laptop, that meets the minimal system requirements.</p>
+    <p>If you encounter any issues or need further assistance, feel free to reach out at <a href="mailto:giga8320@gmail.com">giga8320@gmail.com</a>.</p>
+</header>
+<nav>
+    <a href="#About Proxmox">About Proxmox</a>
+    <a href="#Instructions">Instructions</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="About Proxmox">
+    <h2>About Proxmox</h2>
+    <h2>Hello, and welcome to my Proxmox Installation tutorial website!</h2>
+    <p>Proxmox Virtual Environment (Proxmox VE) is an open-source platform for virtualization and container management, combining KVM (Kernel-based Virtual Machine) for full virtualization and LXC (Linux Containers) for lightweight containerization. It is designed to run multiple virtual machines and containers efficiently on a single physical host...</p>
+    <hr>
+</section>
+
+<section id="Instructions">
+    <h2>Proxmox VE Installation Guide</h2>
+    <h3>Step 1: System Requirements</h3>
+    <p>Before installing Proxmox VE, ensure your hardware meets the following minimum requirements:</p>
+    <ul>
+        <li><strong>CPU:</strong> 64-bit processor with virtualization support (Intel VT/AMD-V).</li>
+        <li><strong>RAM:</strong> At least 2 GB (4 GB or more recommended).</li>
+        <li><strong>Storage:</strong> Minimum 32 GB (SSD recommended for better performance).</li>
+        <li><strong>Network:</strong> At least one network interface card (NIC). <em>Note: Proxmox does not support Wi-Fi for initial setup; a wired connection is required.</em></li>
+    </ul>
+    <hr>
+    <h3>Step 2: Download Proxmox VE ISO</h3>
+    <ol>
+        <li>Visit the <a href="https://www.proxmox.com/en/proxmox-ve" target="_blank">Proxmox VE downloads page</a>.</li>
+        <li>Download the latest Proxmox VE ISO installer.</li>
+    </ol>
+    <hr>
+    <h3>Step 3: Create a Bootable USB</h3>
+    <ol>
+        <li>Use a tool such as <a href="https://rufus.ie/" target="_blank"><strong>Rufus</strong></a>, <strong>Etcher</strong>, or <strong>Ventoy</strong> to create a bootable USB drive from the downloaded ISO file.</li>
+        <li>Insert the USB drive into your computer and follow the tool’s instructions to load the Proxmox ISO.</li>
+    </ol>
+    <hr>
+    <h3>Step 4: Boot From USB</h3>
+    <ol>
+        <li>Insert the bootable USB into the target machine.</li>
+        <li>Enter the BIOS/UEFI setup by pressing the appropriate key during boot (e.g., F2, F12, DEL, or ESC).</li>
+        <li>Set the USB drive as the primary boot device.</li>
+        <li>Save changes and reboot the machine.</li>
+    </ol>
+    <hr>
+    <h3>Step 5: Install Proxmox VE</h3>
+    <ol>
+        <li>Select <strong>Install Proxmox VE</strong> from the boot menu.</li>
+        <li>Read and agree to the license agreement.</li>
+        <li>Select the target disk for installation:</li>
+    </ol>
+    <hr>
+    <h3>Step 6: First Login</h3>
+    <ol>
+        <li>After installation, remove the USB drive and reboot the system.</li>
+        <li>Access Proxmox from a web browser by navigating to: <code>https://&lt;your-server-ip&gt;:8006</code></li>
+        <li>Log in using:</li>
+    </ol>
+    <hr>
+    <h3>Step 7: Update and Configure</h3>
+    <ol>
+        <li>Update Proxmox to the latest packages.</li>
+    </ol>
+    <hr>
+    <h3>Step 8: Optional Configurations</h3>
+    <ul>
+        <li>Configure storage for virtual machines and containers.</li>
+    </ul>
+</section>
+
+<section id="contact" style="text-align: center; padding: 2rem 0; margin-bottom: 0;">
+    <hr>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:b.wilson32129@gmail.com">b.wilson32129@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/brian-r-wilson/" target="_blank">Brian Wilson</a></p>
+    
+    <h3>Submit Information</h3>
+    <form action="submit_form.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer style="text-align: center; padding: 1rem 0; margin-top: 0; width: auto;">
+    <img src="GIGATECH.png" alt="Gigatech Logo" style="width: 150px; display: block; margin: 0 auto; margin-bottom: 5px;">
+    <p>&copy; 2025 GIGATECH. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
